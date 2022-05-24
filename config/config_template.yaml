@@ -1,3 +1,0 @@
-remote_ws: "" # put here endpoint. For connection to robonomics parachain leave empty
-dt_id:  # int, for example 0
-name_device: "" # should put name of your HID device to compare

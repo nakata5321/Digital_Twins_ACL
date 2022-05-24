@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "Digital_Twins_ACL"
+version = "0.1.0"
+description = "Program for reading data from nfc cards and then comparing those data with ACL on digital twin"
+authors = ["nakata5321 <makar5321@gmail.com>"]
+license = "Apache 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = "^6.0"
+robonomics-interface = "^1.0.2"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.950"
+flake8 = "^4.0.1"
+black = "^22.3.0"
+pre-commit = "^2.19.0"
+types-PyYAML = "^6.0.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
