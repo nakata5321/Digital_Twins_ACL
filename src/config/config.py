@@ -5,15 +5,16 @@ import importlib.resources as pkg_resources
 import config as cg
 
 
-def read_config() -> tp.Union[tp.Dict[str, str], tp.Any]:
+def read_config() -> tp.Dict[str, tp.Dict[str, str]]:
     """
+    tp.Union[tp.Dict[str, str], tp.Any]
     Static function to get dictionary from config file
     :rtype: dict
     :return:dictionary with config parameters
     """
     try:
         content = pkg_resources.read_text(cg, "config.yaml")
-        config = yaml.load(content, Loader=yaml.FullLoader)
+        config: tp.Dict[str, tp.Dict[str, str]] = yaml.load(content, Loader=yaml.FullLoader)
         logging.debug(f"Configuration dict: {content}")
         return config
     except OSError as e:
